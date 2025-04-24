@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/cabecalho.css">
+    <link rel="stylesheet" href="./assets/css/carrossel.css">
+    <link rel="stylesheet" href="./assets/css/chamados.css">
+    <link rel="stylesheet" href="./assets/css/notificacao.css">
+    <link rel="stylesheet" href="./assets/css/table.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <title>Intranet | Novo Hospital Santa Tereza</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/img/Logo_NovoHST 1.png" alt="Logotipo Novo Hospital Santa Tereza" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#abertura">Abertura de Chamados</a></li>
+                <li><a href="#notificacao">Notificação de Eventos</a></li>
+                <li><a href="#ramal">Ramais</a></li>
+                <li><a href="http://webmail.novohst.com.br/?0.73175100%201741874491">Webmail</a></li>
+                <li><a href="./assets/arquivos/psi.pdf">Política de segurança da Informação</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Aqui começa o mural de avisos-->
+        <section class="carrossel__container">
+            <div class="carousel">
+                <div class="slide active" style="background-image: url('./assets/img/carrossel_01.png');">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h1>Olá, seja bem-vindo colaborador!</h1>
+                        <p>Acesse a Intranet para abrir chamados, consultar a lista de ramais e encontrar links úteis.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('./assets/img/carrossel_02.jpeg');">
+                    <div class="overlay"></div>
+                    <div class="content">
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('./assets/img/carrossel_03.png');">
+                    <div class="overlay"></div>
+                    <div class="content">
+                    </div>
+                </div>
+                <div class="controls">
+                    <button onclick="prevSlide()">&#10094;</button>
+                    <button onclick="nextSlide()">&#10095;</button>
+                </div>
+                <div class="indicators"></div>
+            </div>
+        </section>
+        <!--Aqui termina o mural de avisos-->
+        <section  id="abertura" class="abertura__chamados">
+            <div class="imagem__container">
+                <img src="./assets/img/glpi.png" class="abertura__chamados-img" alt="imagem tela de login GLPI">
+            </div>
+            <div class="abertura__chamados-texto">
+                <h2 class="main__titulo">Abertura de chamados</h2>
+                <p class="main__texto">Acesse o GLPI para realizar a abertura de chamados e escolha entre chamados para o setor de Manutenção ou Tecnologia da Informação, em caso de dúvidas realize o download do manual clicando no botão abaixo:</p>
+                <div class="botoes">
+                    <a href="./assets/arquivos/abertura_chamados_ti_manutencao.pdf"><button class="download-btn">Fazer Download do Manual</button></a>
+                    <a href="http://192.168.0.251/glpi/front/ticket.php"><button class="download-btn">Acessar GLPI</button></a>
+                </div>
+            </div>
+        </section>
+        <section id="notificacao" class="notificao_eventos">
+            <div class="imagem__container-notificacao">
+                <img src="./assets/img/undraw_button-style_mmk3.svg" alt="">
+            </div>
+            <div class="texto__notificacao">
+                <h2 class="notificacao__titulo">Notificação de Eventos</h2>
+                <p class="notificacao__texto">Para criar uma notificação de evento, basta clicar no botão abaixo. Você será redirecionado para o portal, onde seus dados serão mantidos em total sigilo.</p>
+                <a href="https://www.novohst.com.br/notificacao-de-evento/"><button class="notificacao-btn">Acessar Notificação de Eventos</button></a>
+            </div>   
+        </section>
+        <section id="ramal" class="ramais">
+            <h2 class="main__titulo">Lista de Ramais <i class="fa-solid fa-phone"></i></h2>
+            <table>
+                <input type="text" id="searchInput" placeholder="Pesquisar ramal"  onkeyup="searchTable()">
+                <thead>
+                    <tr>
+                        <th>Setor</th>
+                        <th>Ramal</th>
+                    </tr>
+                </thead>
+                <tbody id="ramalTable">
+                    <tr>
+                        <td>Almoxarifado</td>
+                        <td>6220</td>
+                    </tr>
+                    <tr>
+                        <td>Ambulatório 3° Andar</td>
+                        <td>6331</td>
+                    </tr>
+                    <tr>
+                        <td>Ambulatório Pediátrico</td>
+                        <td>6321</td>
+                    </tr>
+                    <tr>
+                        <td>CAF</td>
+                        <td>6302</td>
+                    </tr>
+                    <tr>
+                        <td>Centro Cirúrgico</td>
+                        <td>6243</td>
+                    </tr>
+                    <tr>
+                        <td>Contabilidade</td>
+                        <td>6308</td>
+                    </tr>
+                    <tr>
+                        <td>Controladoria</td>
+                        <td>6254</td>
+                    </tr>
+                    <tr>
+                        <td>Departamento Pessoal</td>
+                        <td>6311</td>
+                    </tr>
+                    <tr>
+                        <td>Documentação</td>
+                        <td>6213</td>
+                    </tr>
+                    <tr>
+                        <td>Eletivas</td>
+                        <td>6331</td>
+                    </tr>
+                    <tr>
+                        <td>Enfermagem PA</td>
+                        <td>6265</td>
+                    </tr>
+                    <tr>
+                        <td>Farmácia Centro Cirúrgico</td>
+                        <td>6244</td>
+                    </tr>
+                    <tr>
+                        <td>Faturamento de Convênios</td>
+                        <td>6204</td>
+                    </tr>
+                    <tr>
+                        <td>Faturamento SUS</td>
+                        <td>6218</td>
+                    </tr>
+                    <tr>
+                        <td>Financeiro</td>
+                        <td>6207</td>
+                    </tr>
+                    <tr>
+                        <td>Gerência da Assistência</td>
+                        <td>6210</td>
+                    </tr>
+                    <tr>
+                        <td>Gerência de Suprimentos</td>
+                        <td>6264</td>
+                    </tr>
+                    <tr>
+                        <td>Higienização</td>
+                        <td>6333</td>
+                    </tr>
+                    <tr>
+                        <td>Imagem</td>
+                        <td>6249</td>
+                    </tr>
+                    <tr>
+                        <td>Internamento</td>
+                        <td>6214</td>
+                    </tr>
+                    <tr>
+                        <td>Laboratório Externo</td>
+                        <td>6224</td>
+                    </tr>
+                    <tr>
+                        <td>NIR</td>
+                        <td>6257</td>
+                    </tr>
+                    <tr>
+                        <td>Nutrição</td>
+                        <td>6201</td>
+                    </tr>
+                    <tr>
+                        <td>Ouvidoria</td>
+                        <td>6273</td>
+                    </tr>
+                    <tr>
+                        <td>Posto 2</td>
+                        <td>6236</td>
+                    </tr>
+                    <tr>
+                        <td>Posto 4</td>
+                        <td>6237</td>
+                    </tr>
+                    <tr>
+                        <td>Posto 5</td>
+                        <td>6238</td>
+                    </tr>
+                    <tr>
+                        <td>Pronto Atendimento</td>
+                        <td>6262</td>
+                    </tr>
+                    <tr>
+                        <td>Protereza</td>
+                        <td>6221</td>
+                    </tr>
+                    <tr>
+                        <td>Psicologia</td>
+                        <td>6248</td>
+                    </tr>
+                    <tr>
+                        <td>Same</td>
+                        <td>6212</td>
+                    </tr>
+                    <tr>
+                        <td>Secretaria</td>
+                        <td>6253</td>
+                    </tr>
+                    <tr>
+                        <td>Segurança do Trabalho</td>
+                        <td>6311</td>
+                    </tr>
+                    <tr>
+                        <td>Tecnologia da Informação</td>
+                        <td>6208</td>
+                    </tr>
+                    <tr>
+                        <td>Tesouraria</td>
+                        <td>6217</td>
+                    </tr>
+                    <tr>
+                        <td>UTI Geral</td>
+                        <td>6245</td>
+                    </tr>
+                    <tr>
+                        <td>UTI Neonatal</td>
+                        <td>6240</td>
+                    </tr>
+                </tbody>                
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Novo Hospital Santa Tereza. Todos os direitos reservados.</p>
+    </footer>
+    <script src="./assets/js/slide.js"></script>
+    <script src="./assets/js/alert.js"></script>
+    <script src="./assets/js/pesquisa.js"></script>
+</body>
+</html>

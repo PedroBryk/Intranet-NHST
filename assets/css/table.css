@@ -1,0 +1,38 @@
+.ramais{
+    display: grid;
+    place-items: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+input{
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #4D70B5;;
+    outline: none;
+    transition: .1s;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.02);
+    
+}
+
+input:focus{
+    border-bottom: 4px solid #4D70B5;
+}
+

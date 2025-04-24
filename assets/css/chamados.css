@@ -1,0 +1,72 @@
+.abertura__chamados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    padding: 20px;
+
+}
+
+.imagem__container{
+    flex: 1;
+    height: 400px;
+    display: grid;
+    place-items: center;
+}
+
+.abertura__chamados-texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    line-height: 1.5;
+
+}
+
+.main__titulo{
+    font-size: 26px;
+    
+}
+
+.main__texto{
+    font-size: 18px;
+    font-weight: 400;
+    width: 80%;
+}
+
+.download-btn{
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #00d084;
+    transition: .5s;
+    cursor: pointer;
+    color: #ffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:hover{
+    background-color: #303030;
+}
+
+.botoes{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+@media(max-width: 1200px){
+
+    .abertura__chamados{
+        flex-wrap: wrap-reverse;
+    }
+    
+    .imagem__container img{
+        width: 400px;
+        height: auto;
+    }
+
+}

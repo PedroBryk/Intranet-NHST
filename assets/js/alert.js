@@ -1,0 +1,1 @@
+alert("Por favor, leia os avisos no mural!");

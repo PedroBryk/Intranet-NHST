@@ -1,0 +1,47 @@
+.notificao_eventos{
+    background-color: #4D70B5;
+    display: flex;
+    align-items: center;
+    padding: 20px;   
+
+}
+
+.imagem__container-notificacao{
+    display: grid;
+    place-items: center;
+}
+
+.imagem__container-notificacao img{
+    width: 60%;
+}
+
+.notificacao__titulo{
+    font-size: 24px;
+    color: #F9F9F9;
+}
+
+.notificacao__texto{
+    font-size: 18px;
+    font-weight: 300;
+    color: #F9F9F9;
+    width: 80%;
+    line-height: 1.5;
+}
+
+.notificacao-btn{
+    width: 60%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #00d084;
+    transition: .5s;
+    cursor: pointer;
+    color: #ffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    
+}
+
+.notificacao-btn:hover{
+    background-color: #303030;
+}

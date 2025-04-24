@@ -1,0 +1,14 @@
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #F9F9F9;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 80px; 
+}
+
