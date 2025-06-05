@@ -1,11 +1,71 @@
-#notificacao_form{
-    height: 200px;
-    width: 50%;
-    background-color: red;
-}
-
 main{
     display: grid;
     place-items: center;
-    padding-top: 80px; 
+    padding-top: 80px;
+}
+
+#notificacao_form {
+    height: auto;
+    width: 50%;
+    background-color: white; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 2%;
+    border-radius: 8px;
+}
+
+.etapa__questoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 5%;
+}
+
+.etapa__questoes label,
+.etapa__questoes fieldset {
+    flex: 1 1 45%; /* Lado a lado quando possível */
+    display: flex;
+    flex-direction: column;
+}
+
+.etapa__questoes input[type="text"],
+.etapa__questoes input[type="date"],
+.etapa__questoes input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Deixa os radios alinhados corretamente */
+.etapa__questoes fieldset {
+    border: none;
+    padding: 0;
+}
+
+.etapa__questoes fieldset label {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.etapa__questoes-titulo{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.notificacao-btn{
+    width: 60%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #00d084;
+    transition: .5s;
+    cursor: pointer;
+    color: #ffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    
+}
+
+.notificacao-btn:hover{
+    background-color: #303030;
 }

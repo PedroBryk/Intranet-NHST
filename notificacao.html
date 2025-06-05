@@ -28,35 +28,84 @@
         </nav>
     </header>
     <main>
+        <h1>Notificação de Segurança do Paciente</h1>
         <form id="notificacao_form">
                 <section class="etapa" aria-labelledby="identificacao">
                     <div class="etapa__titulo">
-                        <h3 id="identificacao" class="etapa__titulo-titulo">1 - Identificação</h3>
+                        <h3 id="identificacao" class="etapa__titulo-titulo">Identificação</h3>
                         <p class="etapa__titulo-texto">* Indica preenchimento obrigatório</p>
                     </div>
                     <div class="etapa__questoes">
-                        <label>Paciente: <input type="text" name="nome_paciente" required></label>
-                        <label>Data da Internação: <input type="date" name="data_internacao" required></label>
-                        <label>Setor: <input type="text" name="setor" required></label>
-                        <label>Leito: <input type="text" name="leito" required></label>
-                        <label>Idade: <input type="number" name="idade" min="0" required></label>
+                        <label>Nome Completo do Paciente * : <input type="text" name="nome_paciente" required></label>
+                        <label>Data da Internação  * : <input type="date" name="data_internacao" required></label>
+                        <label>Leito  * : <input type="text" name="leito" required></label>
+                        <label>Idade * : <input type="number" name="idade" min="0" required></label>
 
                         <fieldset>
-                            <legend>Sexo</legend>
+                            <legend>Sexo * :</legend>
                             <label><input type="radio" name="sexo" value="F" required> Feminino</label>
                             <label><input type="radio" name="sexo" value="M"> Masculino</label>
                         </fieldset>
 
-                        <label>Data da Notificação: <input type="date" name="data_notificacao" required></label>
+                        <label>Data da Notificação * : <input type="date" name="data_notificacao" required></label>
                         <label>Data do incidente: <input type="date" name="data_incidente" required></label>
 
                         <fieldset>
-                            <legend>Turno do Incidente</legend>
+                            <legend>Turno do Incidente * :</legend>
                             <label><input type="radio" name="turno" value="Diurno" required> Diurno</label>
                             <label><input type="radio" name="turno" value="Noturno"> Noturno</label>
                         </fieldset>
+
+                        <label>Setor que está notificando * : <input type="text" name="setor" required></label>
+                        <label>Data da Internação  * : <input type="date" name="data_internacao" required></label>
                     </div>
                 </section>
+
+                <section class="etapa" aria-labelledby="identificacao">
+                    <div class="etapa__titulo">
+                        <h3 id="identificacao" class="etapa__titulo-titulo">1 - Classificação do Evento * </h3>
+                        <p class="etapa__titulo-texto">* Indica preenchimento obrigatório</p>
+                    </div>
+                    <div class="etapa__questoes">
+                        <fieldset class="etapa__questoes-container">
+                            <label><input type="radio" name="classificacao_do_evento" value="Incidente Sem Dano" required> Incidente Sem Dano</label>
+                            <label><input type="radio" name="classificacao_do_evento" value="Incidente Com Dano"> Incidente Com Dano</label>
+                            <label><input type="radio" name="classificacao_do_evento" value="Quase Erro (não chegou a atingir o paciente)"> Quase Erro (não chegou a atingir o paciente)</label>
+                            <label><input type="radio" name="classificacao_do_evento" value="Circunstância notificável (situação que apresenta um potencial de causar danos/erros futuros)"> Circunstância notificável (situação que apresenta um potencial de causar danos/erros futuros)</label>
+                        </fieldset>
+                    </div>
+                </section>
+
+                <section class="etapa" aria-labelledby="identificacao">
+                    <div class="etapa__titulo">
+                        <h3 id="identificacao" class="etapa__titulo-titulo">2 - Consequência Para o Paciente * </h3>
+                        <p class="etapa__titulo-texto">* Indica preenchimento obrigatório</p>
+                    </div>
+                    <div class="etapa__questoes">
+                        <fieldset class="etapa__questoes-container">
+                            <label><input type="radio" name="consequencia_paciente" value="Sem Dano" required> Sem Dano</label>
+                            <label><input type="radio" name="consequencia_paciente" value="Dano Leve (não prolongou internação, sem sequelas)"> Dano Leve (não prolongou internação, sem sequelas)</label>
+                            <label><input type="radio" name="consequencia_paciente" value="Dano Moderado (prolongou internação, necessidade de intervenção)"> Dano Moderado (prolongou internação, necessidade de intervenção)</label>
+                            <label><input type="radio" name="consequencia_paciente" value="Dano Grave (ameaça à vida, intervenção para preservar a vida)"> Dano Grave (ameaça à vida, intervenção para preservar a vida)</label>
+                            <label><input type="radio" name="consequencia_paciente" value="Óbito"> Óbito</label>
+                        </fieldset>
+                    </div>
+                </section>
+
+                <section class="etapa" aria-labelledby="identificacao">
+                    <div class="etapa__titulo">
+                        <h3 id="identificacao" class="etapa__titulo-titulo">3 - Tipo de Evento * </h3>
+                        <p class="etapa__titulo-texto">* Indica preenchimento obrigatório</p>
+                    </div>
+                    <div class="etapa__questoes">
+                        <fieldset class="etapa__questoes-container">
+                            <label><input type="radio" name="tipo_evento" value="Sem Dano" required> Sem Dano</label>
+                            <label><input type="radio" name="tipo_evento" value="Dano Leve (não prolongou internação, sem sequelas)"> Dano Leve (não prolongou internação, sem sequelas)</label>
+                            
+                        </fieldset>
+                    </div>
+                </section>
+                <button class="notificacao-btn" type="submit">Enviar</button>
             </form>
     </main>
 </body>
