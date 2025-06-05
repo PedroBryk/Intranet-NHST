@@ -4,6 +4,12 @@ main{
     padding-top: 80px;
 }
 
+.notificacao__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #notificacao_form {
     height: auto;
     width: 50%;
