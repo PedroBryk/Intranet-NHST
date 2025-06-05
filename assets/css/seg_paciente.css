@@ -1,0 +1,11 @@
+#notificacao_form{
+    height: 200px;
+    width: 50%;
+    background-color: red;
+}
+
+main{
+    display: grid;
+    place-items: center;
+    padding-top: 80px; 
+}

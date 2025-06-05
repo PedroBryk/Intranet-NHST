@@ -43,7 +43,7 @@ nav ul li a:hover {
     color: #00d084;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 768px){
 
     header{
         flex-direction: column;
@@ -52,6 +52,12 @@ nav ul li a:hover {
     nav{
         padding-top: 20px;
         padding-right: 0;
+        
+    }
+
+    nav ul{
+
+        flex-direction: column;
     }
 
 }
