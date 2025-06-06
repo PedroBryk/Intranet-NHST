@@ -12,11 +12,15 @@ main{
 
 #notificacao_form {
     height: auto;
-    width: 50%;
+    width: 60%;
     background-color: white; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
     padding: 2%;
     border-radius: 8px;
+}
+
+.etapa__titulo-titulo{
+    font-size: 18px;
 }
 
 .etapa__questoes {
@@ -58,9 +62,14 @@ main{
     margin-bottom: 10px;
 }
 
+.formulario__botoes{
+    display: flex;
+    gap: 15px;
+}
+
 .notificacao-btn{
-    width: 60%;
-    height: 60px;
+    width: 20%;
+    height: 40px;
     border: none;
     border-radius: 10px;
     font-weight: 600;
@@ -72,6 +81,18 @@ main{
     
 }
 
+.cancelar{
+    background-color: red;
+}
+
 .notificacao-btn:hover{
     background-color: #303030;
+}
+
+.etapa__questoes-container label{
+    padding: 10px;
+}
+
+#outros_input{
+    margin-top: 20px;
 }
