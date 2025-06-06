@@ -29,15 +29,33 @@ const radios = document.querySelectorAll('input[type="radio"][name="tipo_evento"
 //Fetch no Google Planilhas
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwpeGBvf9tGAmnbbcLpObFaR7cW566D-GRzcI20JOQUHobWmHHGZGoFN9rnplXwIE51/exec';
-    const form = document.getElementById('notificacao_form');
+const form = document.getElementById('notificacao_form');
+const submitButton = form.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: new FormData(form)
-      })
-      .then(() => alert("Formulário enviado com sucesso!"))
-      .catch(error => alert("Erro ao enviar o formulário!"));
-    });
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  // Desativa o botão e altera o texto
+  submitButton.disabled = true;
+  const originalText = submitButton.textContent;
+  submitButton.textContent = "Enviando...";
+
+  fetch(scriptURL, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: new FormData(form)
+  })
+  .then(() => {
+    alert("Formulário enviado com sucesso!");
+    form.reset(); // Limpa os campos do formulário
+  })
+  .catch(error => {
+    alert("Erro ao enviar o formulário!");
+    console.error('Erro:', error);
+  })
+  .finally(() => {
+    // Reativa o botão e restaura o texto
+    submitButton.disabled = false;
+    submitButton.textContent = originalText;
+  });
+});
