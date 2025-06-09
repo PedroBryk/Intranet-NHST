@@ -1,9 +1,10 @@
 .notificao_eventos{
     background-color: #4D70B5;
     display: flex;
+    justify-content: space-between;
+    gap: 170px;
     align-items: center;
-    padding: 20px;   
-
+    padding: 20px;    
 }
 
 .imagem__container-notificacao{
@@ -12,20 +13,21 @@
 }
 
 .imagem__container-notificacao img{
-    width: 60%;
+    width: 100%;
 }
 
 .notificacao__titulo{
     font-size: 24px;
     color: #F9F9F9;
+    width: 60%;
 }
 
 .notificacao__texto{
     font-size: 18px;
     font-weight: 300;
     color: #F9F9F9;
-    width: 80%;
     line-height: 1.5;
+    width: 80%;
 }
 
 .notificacao-btn{
@@ -44,4 +46,15 @@
 
 .notificacao-btn:hover{
     background-color: #303030;
+}
+
+.notificao_evento_adverso{
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+    margin: 80px; 
+}
+
+.black{
+    color: #303030;    
 }
