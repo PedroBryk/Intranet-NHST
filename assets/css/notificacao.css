@@ -4,7 +4,8 @@
     justify-content: space-between;
     gap: 170px;
     align-items: center;
-    padding: 20px;    
+    padding: 30px;   
+     
 }
 
 .imagem__container-notificacao{
@@ -14,6 +15,7 @@
 
 .imagem__container-notificacao img{
     width: 100%;
+    
 }
 
 .notificacao__titulo{
