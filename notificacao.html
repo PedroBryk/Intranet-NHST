@@ -39,15 +39,15 @@
                     </div>
                     <div class="etapa__questoes">
                         <label>Nome Completo do Paciente * : <input type="text" name="nome_paciente" required></label>
-                        <label>Data da Internação  * : <input type="date" name="data_internacao" required></label>
+                        <label>Data da Internação : <input type="date" name="data_internacao"></label>
                         <label>Prontuário  * : <input type="text" name="prontuario" required></label>
                         <label>Idade : <input type="number" name="idade" min="0" ></label>
 
                         <label>Data da Notificação * : <input type="date" name="data_notificacao" required></label>
-                        <label>Data do incidente: <input type="date" name="data_incidente" required></label>
+                        <label>Data do incidente: * <input type="date" name="data_incidente" required></label>
 
                         <label>Setor que está notificando : <input type="text" name="setor" ></label>
-                        <label>Setor que está sendo notificado : <input type="text" name="setor_notificado" required></label>
+                        <label>Setor em que ocorreu o acidente * : <input type="text" name="setor_notificado" required></label>
 
                         <fieldset>
                             <legend>Turno do Incidente * :</legend>
@@ -95,6 +95,7 @@
                     </div>
                     <div class="etapa__questoes">
                         <fieldset class="etapa__questoes-container">
+                            <label><input type="radio" name="tipo_evento" value="Acidentes do paciente"> Circunstância Notificável</label>
                             <label><input type="radio" name="tipo_evento" value="Acidentes do paciente"> Acidentes do Paciente</label>
                             <label><input type="radio" name="tipo_evento" value="Broncoaspiração"> Broncoaspiração</label>
                             <label><input type="radio" name="tipo_evento" value="Envolvendo Intubação Traqueal"> Envolvendo Intubação Traqueal</label>
