@@ -28,7 +28,7 @@ const radios = document.querySelectorAll('input[type="radio"][name="tipo_evento"
 
 //Fetch no Google Planilhas
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwpeGBvf9tGAmnbbcLpObFaR7cW566D-GRzcI20JOQUHobWmHHGZGoFN9rnplXwIE51/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzx9Emc7vBN6D8ZRibZv0Kn-ZI5lmswniGCt7In7yT_6NM1x_DUOj-YNPEfdSC7WvvbUQ/exec';
 const form = document.getElementById('notificacao_form');
 const submitButton = form.querySelector('button[type="submit"]');
 
