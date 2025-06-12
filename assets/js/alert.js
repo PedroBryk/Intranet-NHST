@@ -1,1 +1,6 @@
-//alert("Por favor, leia os avisos no mural!");
+const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav .menu');
+
+    toggleButton.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });

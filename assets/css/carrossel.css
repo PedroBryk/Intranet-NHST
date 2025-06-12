@@ -1,26 +1,39 @@
-.carousel {
-    position: relative;
+/* Container do carrossel */
+.carrossel__container {
     width: 100%;
-    height: 450px;
+    max-width: 100%;
     overflow: hidden;
 }
 
+/* Carrossel fixo e estável */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Altura fixa e confiável */
+    overflow: hidden;
+}
+
+/* Slide ocupa o mesmo espaço SEM variação */
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    top: 0;
+    left: 0;
 }
 
+/* Slide visível */
 .slide.active {
     opacity: 1;
+    z-index: 1;
 }
 
-
+/* Conteúdo dentro do slide */
 .content {
     position: absolute;
     top: 50%;
@@ -29,6 +42,7 @@
     color: white;
 }
 
+/* Título e texto */
 .content h1 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -39,6 +53,7 @@
     max-width: 400px;
 }
 
+/* Botões de navegação */
 .controls {
     position: absolute;
     width: 100%;
@@ -46,6 +61,7 @@
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    z-index: 2;
 }
 
 .controls button {
@@ -61,12 +77,14 @@
     background: rgba(0, 0, 0, 0.7);
 }
 
+/* Indicadores */
 .indicators {
     position: absolute;
     bottom: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 .indicator {

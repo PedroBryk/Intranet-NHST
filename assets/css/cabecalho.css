@@ -43,23 +43,48 @@ nav ul li a:hover {
     color: #00d084;
 }
 
-@media(max-width: 768px){
+nav .menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
 
-    header{
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    nav .menu {
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1000;
     }
 
-    nav{
-        padding-top: 20px;
-        padding-right: 0;
-        
+    nav .menu.active {
+        display: flex;
     }
 
-    nav ul{
-
-        flex-direction: column;
+    nav .menu li {
+        margin: 10px 0;
     }
-
 }
 
 
