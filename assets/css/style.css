@@ -12,4 +12,22 @@ body {
     padding-top: 80px; 
 }
 
+.acesso_sgh_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%; 
+    background-color: #2A95DF;
+    margin: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  
+    .acesso_sgh_container{
+    flex-direction: column;
+    gap: 50px;
+    }
+}
 

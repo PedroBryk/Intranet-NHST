@@ -9,7 +9,7 @@
 .carousel {
     position: relative;
     width: 100%;
-    height: 300px; /* Altura fixa e confiável */
+    height: 400px; /* Altura fixa e confiável */
     overflow: hidden;
 }
 
