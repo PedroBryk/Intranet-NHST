@@ -59,3 +59,13 @@
 .black{
     color: #303030;    
 }
+
+.orange{
+    color: #F2380F;
+    font-weight: 900;    
+}
+
+.orange_container{
+    background-color: #F2380F;
+}
+
