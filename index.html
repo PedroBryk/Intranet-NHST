@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/cabecalho.css">
-    <link rel="stylesheet" href="./assets/css/carrossel.css">
     <link rel="stylesheet" href="./assets/css/chamados.css">
     <link rel="stylesheet" href="./assets/css/notificacao.css">
     <link rel="stylesheet" href="./assets/css/exames.css">
@@ -25,7 +26,6 @@
             <img src="./assets/img/Logo_NovoHST 1.png" alt="Logotipo Novo Hospital Santa Tereza" class="logo">
         </a>
         
-        <!-- Botão do menu hamburguer -->
         <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
 
         <nav>
@@ -40,32 +40,34 @@
         </nav>
     </header>
     <main>
-        <!--Aqui começa o mural de avisos-->
-        <section class="carrossel__container">
-            <div class="carousel">
-                <div class="slide active" style="background-image: url('./assets/img/intranet_banner.png');">
-                    <div class="overlay"></div>
-                    <div class="content">
-                    </div>
-                </div>
-                <div class="slide" style="background-image: url('./assets/img/Etiqueta\ Respiratória.png');">
-                    <div class="overlay"></div>
-                    <div class="content">
-                    </div>
-                </div>
-                <div class="slide" style="background-image: url('./assets/img/intranet_banner_03.png');">
-                    <div class="overlay"></div>
-                    <div class="content">
-                    </div>
-                </div>
-                <div class="controls">
-                    <button onclick="prevSlide()">&#10094;</button>
-                    <button onclick="nextSlide()">&#10095;</button>
-                </div>
-                <div class="indicators"></div>
-            </div>
-        </section>
 
+        <!--Aqui começa o mural de avisos-->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="./assets/img/intranet_banner/boas-vindas.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="./assets/img/intranet_banner/Etiqueta Respiratória.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="./assets/img/intranet_banner/Higienização das mãos.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="./assets/img/intranet_banner/Higienização das mãos com solução alcóolica.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--Aqui termina o mural de avisos-->
+        
         <section id="salutem" class="acesso_sgh_container">
             <div class="texto__notificacao">
                 <h2 class="notificacao__titulo">Acesse aqui o novo Sistema SALUTEM</h2>
@@ -106,7 +108,7 @@
         </section>
         <section id="notificacao" class="notificao_evento_adverso">
             <div class="texto__notificacao black">
-                <h2 class="notificacao__titulo black">Notificação de Eventos Adversos – Segurança do Paciente</h2>
+                <h2 class="notificacao__titulo black">Notificação de Segurança do Paciente</h2>
                 <p class="notificacao__texto black">A notificação de eventos adversos, incidentes, circunstâncias notificáveis e quase-erros relacionados à assistência ao paciente é essencial para a análise de riscos, prevenção de novos eventos e para a implementação de melhorias nos processos de cuidado. O Núcleo de Segurança do Paciente (NSP) analisa essas notificações de forma confidencial e não punitiva, com foco na prevenção de novos eventos.</p>
                 <a href="manual_notificacao.html"><button class="notificacao-btn">Acessar Notificação de Eventos Adversos</button></a>
             </div>   
@@ -312,5 +314,6 @@
     <script src="./assets/js/slide.js"></script>
     <script src="./assets/js/alert.js"></script>
     <script src="./assets/js/pesquisa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>

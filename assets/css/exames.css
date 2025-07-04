@@ -14,12 +14,12 @@
 
 .exame{
     background-color: #00d084;
-    padding: 50px;
+    padding: 55px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-    width: 200px;
+    width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: .2s;
