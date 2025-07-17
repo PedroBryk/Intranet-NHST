@@ -1,38 +1,60 @@
 document.getElementById('whatsapp').addEventListener('input', function (e) {
-    let value = e.target.value.replace(/\D/g, ''); // remove tudo que não for número
+  let value = e.target.value.replace(/\D/g, '');
 
-    if (value.length > 11) value = value.slice(0, 11); // limita a 11 dígitos
+  if (value.length > 11) value = value.slice(0, 11);
 
-    if (value.length >= 2 && value.length <= 6) {
-      value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-    } else if (value.length > 6 && value.length <= 10) {
-      value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
-    } else if (value.length > 10) {
-      value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
-    }
+  if (value.length >= 2 && value.length <= 6) {
+    value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+  } else if (value.length > 6 && value.length <= 10) {
+    value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
+  } else if (value.length > 10) {
+    value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+  }
 
-    e.target.value = value;
-  });
+  e.target.value = value;
+});
 
-  document.getElementById('cpf').addEventListener('input', function (e) {
-    let value = e.target.value.replace(/\D/g, ''); // remove tudo que não for número
+document.getElementById('cpf').addEventListener('input', function (e) {
+  let value = e.target.value.replace(/\D/g, '');
 
-    if (value.length > 11) value = value.slice(0, 11); // limita a 11 dígitos
+  if (value.length > 11) value = value.slice(0, 11);
 
-    if (value.length > 9) {
-      value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
-    } else if (value.length > 6) {
-      value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
-    } else if (value.length > 3) {
-      value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
-    }
+  if (value.length > 9) {
+    value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+  } else if (value.length > 6) {
+    value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+  } else if (value.length > 3) {
+    value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+  }
 
-    e.target.value = value;
-  });
+  e.target.value = value;
+});
 
+// Validação de CPF (básica, baseada em dígitos)
+function validarCPF(cpf) {
+  cpf = cpf.replace(/[^\d]+/g, '');
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
 
-//Fetch no Google Planilhas
+  let soma = 0;
+  for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (10 - i);
+  let resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.charAt(9))) return false;
 
+  soma = 0;
+  for (let i = 0; i < 10; i++) soma += parseInt(cpf.charAt(i)) * (11 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  return resto === parseInt(cpf.charAt(10));
+}
+
+// Validação de WhatsApp (precisa ter 11 dígitos numéricos: DDD + 9 + 8 dígitos)
+function validarWhatsApp(whats) {
+  const numeros = whats.replace(/\D/g, '');
+  return numeros.length === 11;
+}
+
+// Envio do formulário com validação
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwGpIIk5CrYwjKQC_rxEl9zeMuFXZhXoSLi7IQQqdMkSMcIeg-4Z4a1cYLE5-F9L4AQ/exec';
 const form = document.getElementById('cadastro_form');
 const submitButton = form.querySelector('button[type="submit"]');
@@ -40,7 +62,18 @@ const submitButton = form.querySelector('button[type="submit"]');
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  // Desativa o botão e altera o texto
+  const cpf = document.getElementById('cpf').value;
+  const whatsapp = document.getElementById('whatsapp').value;
+
+  const erros = [];
+  if (!validarCPF(cpf)) erros.push("CPF inválido.");
+  if (!validarWhatsApp(whatsapp)) erros.push("WhatsApp inválido. Use o formato com DDD e 9 dígitos.");
+
+  if (erros.length > 0) {
+    alert(erros.join("\n"));
+    return;
+  }
+
   submitButton.disabled = true;
   const originalText = submitButton.textContent;
   submitButton.textContent = "Enviando...";
@@ -50,17 +83,17 @@ form.addEventListener('submit', e => {
     mode: 'no-cors',
     body: new FormData(form)
   })
-  .then(() => {
-    alert("Formulário enviado com sucesso!");
-    form.reset(); // Limpa os campos do formulário
-  })
-  .catch(error => {
-    alert("Erro ao enviar o formulário!");
-    console.error('Erro:', error);
-  })
-  .finally(() => {
-    // Reativa o botão e restaura o texto
-    submitButton.disabled = false;
-    submitButton.textContent = originalText;
-  });
+    .then(() => {
+      alert("Formulário enviado com sucesso!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("Erro ao enviar o formulário!");
+      console.error('Erro:', error);
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    });
 });
+
