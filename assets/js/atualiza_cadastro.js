@@ -30,7 +30,6 @@ document.getElementById('cpf').addEventListener('input', function (e) {
   e.target.value = value;
 });
 
-// Validação de CPF (básica, baseada em dígitos)
 function validarCPF(cpf) {
   cpf = cpf.replace(/[^\d]+/g, '');
   if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
@@ -48,13 +47,11 @@ function validarCPF(cpf) {
   return resto === parseInt(cpf.charAt(10));
 }
 
-// Validação de WhatsApp (precisa ter 11 dígitos numéricos: DDD + 9 + 8 dígitos)
 function validarWhatsApp(whats) {
   const numeros = whats.replace(/\D/g, '');
   return numeros.length === 11;
 }
 
-// Envio do formulário com validação
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwGpIIk5CrYwjKQC_rxEl9zeMuFXZhXoSLi7IQQqdMkSMcIeg-4Z4a1cYLE5-F9L4AQ/exec';
 const form = document.getElementById('cadastro_form');
 const submitButton = form.querySelector('button[type="submit"]');
