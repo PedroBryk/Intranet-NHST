@@ -1,0 +1,46 @@
+
+.acesso_formulario_atualizacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%; 
+    background-color: #2E696A;
+    margin: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    gap: 30px;
+}
+
+.texto_senior-titulo{
+    color: #75FADB;
+    font-size: 32px;
+    text-align: center;
+}
+
+.texto_senior-texto{
+    color: #ffffff;
+    text-align: center;
+}
+
+.senior-btn{
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #ff6900;
+    transition: .5s;
+    cursor: pointer;
+    color: #ffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  
+    .acesso_sgh_container{
+    flex-direction: column;
+    gap: 50px;
+    }
+}

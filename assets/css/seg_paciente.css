@@ -14,7 +14,7 @@ h1{
 
 
 
-#notificacao_form {
+#notificacao_form, #cadastro_form {
     height: auto;
     width: 60%;
     background-color: white; 
@@ -44,7 +44,8 @@ h1{
 
 .etapa__questoes input[type="text"],
 .etapa__questoes input[type="date"],
-.etapa__questoes input[type="number"] {
+.etapa__questoes input[type="number"],
+.etapa__questoes input[type="email"] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
