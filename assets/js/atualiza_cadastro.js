@@ -79,18 +79,12 @@ form.addEventListener('submit', e => {
     method: 'POST',
     mode: 'no-cors',
     body: new FormData(form)
-  })
-    .then(() => {
-      alert("Formulário enviado com sucesso!");
-      form.reset();
-    })
-    .catch(error => {
-      alert("Erro ao enviar o formulário!");
-      console.error('Erro:', error);
-    })
-    .finally(() => {
-      submitButton.disabled = false;
-      submitButton.textContent = originalText;
-    });
+  });
+
+  // Mostra a mensagem de sucesso direto
+  alert("Formulário enviado com sucesso!");
+  form.reset();
+  submitButton.disabled = false;
+  submitButton.textContent = originalText;
 });
 
