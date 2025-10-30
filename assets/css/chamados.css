@@ -40,11 +40,12 @@
     border: none;
     border-radius: 10px;
     font-weight: 600;
+    font-size: 16px;
     background-color: #00d084;
     transition: .5s;
     cursor: pointer;
     color: #ffff;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
@@ -63,7 +64,7 @@ a{
 
 .botoes{
     display: flex;
-    width: 100%;
+    width: 90%;
     gap: 10px;
 }
 

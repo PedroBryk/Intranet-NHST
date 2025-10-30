@@ -6,6 +6,7 @@ const toggleButton = document.querySelector('.menu-toggle');
     });
 
     function abrirLink() {
-      // Abre o link em uma nova aba/janela
+      
       window.open("https://novohst.sistemasalutem.com.br:9004/hospitalar/#/login", "_blank");
+      
     };

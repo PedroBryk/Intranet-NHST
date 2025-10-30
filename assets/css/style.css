@@ -12,6 +12,10 @@ body {
     padding-top: 80px; 
 }
 
+.botoes_tere{
+  display: flex;
+}
+
 .acesso_sgh_container{
     display: flex;
     justify-content: space-between;
@@ -23,11 +27,60 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+.imagem__container-agenda img{
+    width: 150px;
+}
+
+.roxo{
+    background-color: #4D70B5;
+}
+
+.branco{
+  background-color: #4D70B5;
+}
+
+.preto{
+  color: black;
+}
 @media (max-width: 768px) {
   
     .acesso_sgh_container{
     flex-direction: column;
     gap: 50px;
     }
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.titulo {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.video-box {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.video-titulo {
+  margin-top: 12px;
+  color: #34495e;
+  font-size: 1.2rem;
 }
 
