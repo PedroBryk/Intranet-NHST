@@ -1,0 +1,23 @@
+.acesso_movimentacao_horas{
+    background-color: #4D70B5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 4rem;
+    border-radius: 10px;
+}
+
+.acesso_movimentacao_horas-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.acesso_movimentacao_horas-botoes{
+    display: flex;
+    gap: .5rem;
+}
