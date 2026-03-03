@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="./assets/css/notificacao.css">
     <link rel="stylesheet" href="./assets/css/exames.css">
     <link rel="stylesheet" href="./assets/css/table.css">
+    <link rel="stylesheet" href="./assets/css/itscom.css">
+    <link rel="stylesheet" href="./assets/css/movimentacao.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
     <title>Intranet | Novo Hospital Santa Tereza</title>
@@ -26,10 +28,8 @@
     <header>
         <a href="index.html">
             <img src="./assets/img/Logo_NovoHST 1.png" alt="Logotipo Novo Hospital Santa Tereza" class="logo">
-        </a>
-        
+        </a> 
         <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-
         <nav>
             <ul class="menu">
                 <li><a href="cardapio.html">Cardápio</a></li>
@@ -67,17 +67,30 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
-         <section id="salutem" class="acesso_sgh_container branco" data-aos="zoom-in">
+        <section id="salutem" class="acesso_sgh_container" data-aos="zoom-in">
             <div class="texto__notificacao">
-                <h2 class="notificacao__titulo">Acesse aqui o Portal Educacional do Novo Hospital Santa Tereza</h2>
+                <h2 class="notificacao__titulo">Acesse aqui o novo Sistema SALUTEM para TESTES</h2>
+                <p class="notificacao__texto">Seu nome de usuário permanece o mesmo. Para o primeiro acesso, utilize a senha padrão '123456', que deverá ser alterada obrigatoriamente após o primeiro login.</p>
+                <div class="botoes">
+                    <a href="./assets/arquivos/primeiro_acesso_salutem.pdf"><button class="download-btn">Fazer Download do Manual de Primeiro Acesso</button></a>
+                    <button class="download-btn" onclick="abrirLink()">Acessar Sistema Salutem</button>
+                </div>
+            </div>   
+            <div class="imagem__container-notificacao">
+                <img src="./assets/img/logoSalutemReduzido.svg" alt="">
+            </div>
+        </section>
+        
+        <section id="salutem" class="acesso_sgh_container branco" data-aos="zoom-in">
+            <div class="texto__notificacao">
+              <h2 class="notificacao__titulo">Acesse aqui o Portal Educacional do Novo Hospital Santa Tereza</h2>
                 <p class="notificacao__texto">Apresentamos o Portal Educacional do Novo Hospital Santa Tereza, um ambiente dedicado ao aprendizado contínuo e ao desenvolvimento profissional de nossos colaboradores.</p>
                 <p class="notificacao__texto">Neste espaço, você encontrará videoaulas, questionários e materiais de apoio voltados ao aperfeiçoamento das competências técnicas e comportamentais de nossa equipe</p>
                 <p class="notificacao__texto">No Portal Educacional você também cohecerá mais sobre a Tere, a enfermeira digital do Novo Hospital Santa Tereza!</p>
                 <p class="notificacao__texto">Abaixo você poderá fazer o download dos manuais de primeiro acesso a plataforma e ao seu e-mail institucional:</p>
                 <div class="botoes">
-                    <a href="./assets/arquivos/primeiro_acesso_salutem.pdf"><button class="download-btn">Download Manual de Primeiro Acesso</button></a>
-                    <a href="./assets/arquivos/primeiro_acesso_salutem.pdf"><button class="download-btn">Download Manual de Primeiro Acesso ao Webmail</button></a>
+                    <a href="./assets/arquivos/NHST.TI.POP.01  - Acesso ao Portal Educacional It’sCom.pdf"><button class="download-btn">Download Manual de Primeiro Acesso</button></a>
+                    <a href="./assets/arquivos/NHST.TI.POP.02  - ACESSO AO WEBMAIL KINGHOST.pdf"><button class="download-btn">Download Manual de Primeiro Acesso ao Webmail</button></a>
                     <a href="https://www.portal.novohst.com.br/login"><button class="download-btn">Acessar Portal Educacional</button></a>
                 </div>
             </div>   
@@ -86,6 +99,28 @@
             </div>
         </section>
 
+        <section class="acesso_itscom_container">
+            <div class="acesso_itscom_imagem">
+                <img src="./assets/img/tere obs 3.png" alt="">
+            </div>
+            <div class="acesso_itscom_texto">
+                <h2 class="notificacao__titulo">Acesse abaixo a plataforma It'sCom</h2>
+                <p class="notificacao__texto">A plataforma de comunicação que facilita sua rotina de trabalho!</p>
+                <a href="https://app.itscom.com.br/?logout=true"><button class="acesso_itscom-btn">Acessar</button></a>
+            </div>
+        </section>
+
+        <section class="acesso_movimentacao_horas">
+            <h2 class="notificacao__titulo preto">Solicitação de Movimentação de Banco de Horas</h2>
+            <p class="notificacao__texto preto">O processo de solicitação de movimentação de banco de horas mudou, agora é feito de forma digital e você recebe o retorno no seu webmail institucional!</p>
+            <div class="acesso_movimentacao_horas-botoes">
+                <a href="https://app.itscom.com.br/?logout=true"><button class="acesso_itscom-btn">Acessar</button></a>
+                <a href="https://app.itscom.com.br/?logout=true"><button class="acesso_itscom-btn">Acessar</button></a>
+            </div>
+        </section>
+        
+       
+         
         <section  id="abertura" class="abertura__chamados">
             <div class="imagem__container" data-aos="fade-right">
                 <img src="./assets/img/glpi.png" class="abertura__chamados-img" alt="imagem tela de login GLPI">
@@ -144,19 +179,6 @@
                 </div>
             </div>
         </section>
-        <section id="salutem" class="acesso_sgh_container" data-aos="zoom-in">
-            <div class="texto__notificacao">
-                <h2 class="notificacao__titulo">Acesse aqui o novo Sistema SALUTEM</h2>
-                <p class="notificacao__texto">Seu nome de usuário permanece o mesmo. Para o primeiro acesso, utilize a senha padrão '123456', que deverá ser alterada obrigatoriamente após o primeiro login.</p>
-                <div class="botoes">
-                    <a href="./assets/arquivos/primeiro_acesso_salutem.pdf"><button class="download-btn">Fazer Download do Manual de Primeiro Acesso</button></a>
-                    <button class="download-btn" onclick="abrirLink()">Acessar Sistema Salutem</button>
-                </div>
-            </div>   
-            <div class="imagem__container-notificacao">
-                <img src="./assets/img/logoSalutemReduzido.svg" alt="">
-            </div>
-        </section>
         <section id="salutem" class="acesso_sgh_container roxo" data-aos="zoom-in">
             <div class="texto__notificacao">
                 <h2 class="notificacao__titulo">Manual de Atendimentos Externos</h2>
@@ -170,25 +192,25 @@
             </div>
         </section>
         <section class"container">
-<h1 class="titulo">Manuais em Vídeo - Sistema Salutem</h1>
+            <h1 class="titulo">Manuais em Vídeo - Sistema Salutem</h1>
 
-    <div class="video-box">
-      <video class="video" controls>
-        <source src="./assets/videos/Prescrição.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos HTML5.
-      </video>
-      <h2 class="video-titulo">1 - Como prescrever no sistema Salutem</h2>
-    </div>
+            <div class="video-box">
+            <video class="video" controls>
+                <source src="./assets/videos/Prescrição.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+            <h2 class="video-titulo">1 - Como prescrever no sistema Salutem</h2>
+            </div>
 
-    <div class="video-box">
-      <video class="video" controls>
-        <source src="./assets/videos/agendamento rota.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos HTML5.
-      </video>
-      <h2 class="video-titulo">2 - Como fazer o agendamento de rota no sistema Salutem</h2>
-    </div>
-  </div>
-
+            <div class="video-box">
+            <video class="video" controls>
+                <source src="./assets/videos/agendamento rota.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+                <h2 class="video-titulo">2 - Como fazer o agendamento de rota no sistema Salutem</h2>
+            </div>
+        </div>
+        </section>
         <section id="salutem" class="acesso_formulario_atualizacao" data-aos="zoom-out">
             <div class="texto_senior">
                 <h2 class="texto_senior-titulo">Formulário de Atualização Cadastral para Acesso aos Holerites</h2>

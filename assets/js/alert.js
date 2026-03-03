@@ -7,6 +7,6 @@ const toggleButton = document.querySelector('.menu-toggle');
 
     function abrirLink() {
       
-      window.open("https://novohst.sistemasalutem.com.br:9004/hospitalar/#/login", "_blank");
+      window.open("https://novohsthml.sistemasalutem.com.br:9094/hospitalar/#/login", "_blank");
       
     };

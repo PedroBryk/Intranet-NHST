@@ -1,0 +1,33 @@
+.acesso_itscom_container{
+    background-color: #4D70B5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.acesso_itscom_imagem img{
+    width: 50%;
+}
+
+.acesso_itscom-btn{
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #00d084;
+    transition: .5s;
+    cursor: pointer;
+    color: #ffff;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acesso_itscom-btn:hover{
+    background-color: #303030;
+}
