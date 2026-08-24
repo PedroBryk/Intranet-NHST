@@ -16,6 +16,10 @@ body {
   display: flex;
 }
 
+.tere_pesquisa{
+  width: 30%;
+}
+
 .acesso_sgh_container{
     display: flex;
     justify-content: space-between;
