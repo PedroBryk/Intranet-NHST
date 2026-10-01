@@ -80,6 +80,8 @@
     font-size: 1.05rem;
 }
 
+video { width: 100%; max-width: 800px; border-radius: 8px; }
+
 /* Responsivo */
 @media (max-width: 600px) {
     .video-item {
